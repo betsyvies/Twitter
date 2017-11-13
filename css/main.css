@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/images/background.jpeg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Styles for header */
+
+header {
+    width: 100%;
+    height: 75px;
+    background: #6AD2F3;
+    text-align: center;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #fff;
+    font-family: sans-serif;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+/* Styles for first-section */
+
+.first-section {
+    position: relative;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.first-container {
+    float: left;
+    width: 50%;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.first-part {
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px; 
+}
+
+.first-part h2 {
+    margin-bottom: 20px;    
+}
+
+.first-part p {
+    margin-bottom: 30px;  
+    line-height: 1.5;  
+}
+
+.second-part p {
+    text-transform: uppercase;
+    color: #567689;
+    margin: 0;
+}
+
+form {
+    display: inline-block;
+    width: 45%;
+    background-color: #fff;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.control-group {
+    background-color: transparent;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding: 20px 10px;
+}
+
+.container-group {
+    padding-bottom: 0.5em;
+}
+
+.container-group textarea {
+    background-color: transparent;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    width: 100%;
+    height: 170px;
+}
+
+button:active {
+    background: #E0E4E2;
+    border: 1px solid #000;
+    color: #C4C0BF;
+    border-radius: 0.5rem;
+    outline: 0;
+}
+
+button {
+    color: #fff;
+    border: 1px solid #C4C0BF;
+    background-color: #6AD2F3;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    outline: 0;
+}
