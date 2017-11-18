@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lora', serif;
 }
 
 body {
@@ -22,7 +23,7 @@ header {
 
 header h1 {
     color: #fff;
-    font-family: sans-serif;
+    letter-spacing: 1.5px;
     top: 50%;
     transform: translateY(50%);
 }
@@ -38,27 +39,31 @@ header h1 {
 
 .first-container {
     float: left;
-    width: 50%;
+    width: 45%;
     background-color: #fff;
     margin-top: 5px;
 }
 
 .first-part {
     padding-left: 20px;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 20px; 
 }
 
 .first-part h2 {
+    font-size: 32px;
     margin-bottom: 20px;    
 }
 
 .first-part p {
-    margin-bottom: 30px;  
+    font-size: 20px;
+    margin-bottom: 80px;  
     line-height: 1.5;  
 }
 
 .second-part p {
+    font-size: 20px;
+    font-weight: 700;
     text-transform: uppercase;
     color: #567689;
     margin: 0;
@@ -66,7 +71,7 @@ header h1 {
 
 form {
     display: inline-block;
-    width: 45%;
+    width: 50%;
     background-color: #fff;
     margin-left: 5px;
     margin-top: 10px;
@@ -90,7 +95,7 @@ form {
     outline: none;
     font-size: 1.5em;
     width: 100%;
-    height: 170px;
+    height: 130px;
 }
 
 button:active {
@@ -112,8 +117,24 @@ button {
     outline: 0;
 }
 
-/*  */
+/* Styles for second-section */
+
+#second-section {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px; 
+}
 
 .paragraph {
+    width: 95%;
     background-color: #fff;
+    padding: 20px;
+    border-radius: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 10px;
 }

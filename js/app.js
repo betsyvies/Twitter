@@ -1,24 +1,31 @@
-var button = document.getElementById("button");
-button.addEventListener('click', insertText);
+window.addEventListener('load', function() {
+  var textTarea = document.getElementById('textTarea');
+  var button = document.getElementById('button');
+  button.addEventListener('click', insertText);
+});
 
 function insertText(event) {
-    event.preventDefaul();
+  event.preventDefault();
+
+  if (textTarea.value !== '') {
+    event.target.disabled = false;
+    
     var containerParagraph = document.getElementById('second-section');
-
     var paragraph = document.createElement('div');
-
-    containerParagraph.appendChild(paragraph);
-
+    paragraph.className = 'paragraph';
+  
     var text = document.createElement('p');
-    var content = document.getElementById('textTarea').value;
+    text.className = 'text';
     
-    text.textContent = content;
+    text.textContent = textTarea.value;
+       
+    paragraph.appendChild(text);  
+    containerParagraph.appendChild(paragraph);
     
-    paragraph.appendChild(text);
-
-    /* text.className = 'text'; */
+    textTarea.value = '';
+  } else {
+    event.target.disabled = true;
+  }
 }
-
-
 
 
