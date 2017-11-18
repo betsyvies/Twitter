@@ -125,6 +125,14 @@ button {
     font-size: 25px;
 }
 
+.blue {
+    color: #7298AB;
+}
+
+.brown {
+    color: #6D5144;
+}
+
 /* Styles for second-section */
 
 #second-section {
