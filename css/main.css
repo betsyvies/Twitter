@@ -117,6 +117,14 @@ button {
     outline: 0;
 }
 
+#input {
+    width: 40px;
+    margin-left: 75%;
+    border: none;
+    color: #518A6A;
+    font-size: 25px;
+}
+
 /* Styles for second-section */
 
 #second-section {
