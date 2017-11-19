@@ -98,14 +98,6 @@ form {
     height: 130px;
 }
 
-button:active {
-    background: #E0E4E2;
-    border: 1px solid #000;
-    color: #C4C0BF;
-    border-radius: 0.5rem;
-    outline: 0;
-}
-
 button {
     color: #fff;
     border: 1px solid #C4C0BF;
@@ -117,20 +109,33 @@ button {
     outline: 0;
 }
 
-#input {
+button[disabled] {
+    background-color: #C4C0BF;
+    color: #fff; 
+}
+
+button:active {
+    background-color: #E0E4E2;
+    border: 1px solid #000;
+    color: #C4C0BF;
+    border-radius: 0.5rem;
+    outline: 0;
+}
+
+.container {
     width: 40px;
     margin-left: 75%;
+    color: #518A6A; 
     border: none;
-    color: #518A6A;
     font-size: 25px;
 }
 
 .blue {
-    color: #7298AB;
+    color: #0366D6;
 }
 
-.brown {
-    color: #6D5144;
+.red {
+    color: #E34C26;
 }
 
 /* Styles for second-section */
