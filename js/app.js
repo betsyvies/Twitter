@@ -39,7 +39,7 @@ function insertText(event) {
 }
 
 /* La funcion accountant cuenta la cantidad de caracteres de forma regresiva y 
-   tambien crecen el textarea al presionar enter  */
+   tambien cuando crece el textarea al presionar enter  */
 
 function accountant(event) {
   button.disabled = false;
