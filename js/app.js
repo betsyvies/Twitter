@@ -5,16 +5,16 @@ window.addEventListener('load', function() {
   var button = document.getElementById('button');
   button.addEventListener('click', insertText);
   button.addEventListener('click', accountant);
-  submit.disabled = true;
 });
 
 /* La funcion insertText permite ingresar un texto a un contenedor */
 function insertText(event) {
   event.preventDefault();  
-
+  var textArea = document.getElementById('textArea');
   if (textArea.value.length > 0) {
     button.disabled = false;
 
+    var input = document.querySelector('.container');
     var containerParagraph = document.getElementById('second-section');
     var paragraph = document.createElement('div');
     paragraph.className = 'paragraph';
@@ -43,6 +43,7 @@ function insertText(event) {
 
 function accountant(event) {
   button.disabled = false;
+  var textArea = document.getElementById('textArea');
   var input = document.querySelector('.container');
   input.value = 140 - textArea.value.length;
   if (input.value < 0) {
@@ -51,10 +52,10 @@ function accountant(event) {
   input.classList.toggle('blue', 10 < input.value && input.value <= 20);
   input.classList.toggle('red', input.value <= 10);
 
-  if (event.keyCode === 13 || textarea.value.length >= 171) {
+  if (event.keyCode === 13 || textArea.value.length >= 130) {
     textArea.style.height = textArea.scrollHeight + 'px'; 
   } else {
-    textArea.getAttribute('height-textArea');
+    textArea.style = 'initial';
   }
 };
 

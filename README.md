@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-- El objetivo de esta pagina es replicar el newsfeed de Twitter utilizando HTML5 para crear la estructura, CSS3 para brindar estilo a la pagina y JS para dar interaccion a la página.
+- El objetivo de esta pagina es replicar el newsfeed de Twitter utilizando HTML5 para crear la estructura, CSS3 para brindar estilo y JS para dar interaccion a la página.
 
 ## Flujo de trabajo
 
@@ -15,7 +15,7 @@
 - Comentar el código.
 - Subimos avances a github.
 - Terminar de dar estilo con CSS.
-- Empezamos a trabajar en JS, para dar interacción a la pagina.
+- Empezamos a trabajar en JS, para dar interacción a la página.
 - Comentar el código.
 - Subimos avances a github.
 - Terminamos las seis versiones pedidas.
@@ -27,11 +27,13 @@
 
 - html, para la estructura del contenido.
 - css, para darle estilo al contenido.
-- js; para darle interaccion a la página.
+- js, para darle interaccion a la página.
 
 ## Fuentes consultadas
+
 - [Laboratoria LMS] : https://lms.laboratoria.la/cohorts/lim-2017-09-bc-core-pm/courses/interactive-site/01-making-your-site-interactive/00-opening
 - [MDN web] : https://developer.mozilla.org/es/docs/Web/API/Element/scrollHeight
 
 ## Imagen 
+
 ![Twitter](assets/images/twitter.png)
