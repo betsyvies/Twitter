@@ -1,7 +1,7 @@
 /* Inicializamos con una funcion que contendra los eventos a utilizar */
 window.addEventListener('load', function() {
-  var textTarea = document.getElementById('textTarea');
-  textTarea.addEventListener('keydown', accountant);
+  var textArea = document.getElementById('textArea');
+  textArea.addEventListener('keydown', accountant);
   var button = document.getElementById('button');
   button.addEventListener('click', insertText);
   button.addEventListener('click', accountant);
@@ -12,39 +12,50 @@ window.addEventListener('load', function() {
 function insertText(event) {
   event.preventDefault();  
 
-  if (textTarea.value.length > 0) {
+  if (textArea.value.length > 0) {
     button.disabled = false;
 
     var containerParagraph = document.getElementById('second-section');
     var paragraph = document.createElement('div');
     paragraph.className = 'paragraph';
-      
+    
     var text = document.createElement('p');
     text.className = 'text';
-        
-    text.textContent = textTarea.value;
+    var hour = document.createElement('p');
+    hour.className = 'hour';
+
+    text.textContent = textArea.value;
+    hour.textContent = moment().format('LT');
            
-    paragraph.appendChild(text);  
+    paragraph.appendChild(text); 
+    paragraph.appendChild(hour); 
     containerParagraph.appendChild(paragraph);
     
-    textTarea.value = '';
+    textArea.value = '';
     input.value = '';
   } else {
     button.disabled = true;
   }
 }
 
-/* La funcion accountant cuenta la cantidad de caracteres de forma regresiva */
+/* La funcion accountant cuenta la cantidad de caracteres de forma regresiva y 
+   tambien crecen el textarea al presionar enter  */
 
 function accountant(event) {
   button.disabled = false;
   var input = document.querySelector('.container');
-  input.value = 140 - textTarea.value.length;
+  input.value = 140 - textArea.value.length;
   if (input.value < 0) {
     button.disabled = true;
   } 
   input.classList.toggle('blue', 10 < input.value && input.value <= 20);
   input.classList.toggle('red', input.value <= 10);
+
+  if (event.keyCode === 13 || textarea.value.length >= 171) {
+    textArea.style.height = textArea.scrollHeight + 'px'; 
+  } else {
+    textArea.getAttribute('height-textArea');
+  }
 };
 
 
