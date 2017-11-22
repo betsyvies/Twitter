@@ -2,6 +2,8 @@
 window.addEventListener('load', function() {
   var textArea = document.getElementById('textArea');
   textArea.addEventListener('keydown', accountant);
+  textArea.addEventListener('keyup', accountant);
+
   var button = document.getElementById('button');
   button.addEventListener('click', insertText);
   button.addEventListener('click', accountant);
@@ -42,20 +44,35 @@ function insertText(event) {
    tambien cuando crece el textarea al presionar enter  */
 
 function accountant(event) {
-  button.disabled = false;
   var textArea = document.getElementById('textArea');
   var input = document.querySelector('.container');
-  input.value = 140 - textArea.value.length;
+  var MAXCHARACTERS = 140;
+  input.value = MAXCHARACTERS - textArea.value.trim().length;
+  button.disabled = false;
+
   if (input.value < 0) {
     button.disabled = true;
   } 
+  
   input.classList.toggle('blue', 10 < input.value && input.value <= 20);
   input.classList.toggle('red', input.value <= 10);
 
-  if (event.keyCode === 13 || textArea.value.length >= 130) {
-    textArea.style.height = textArea.scrollHeight + 'px'; 
-  } else {
-    textArea.style = 'initial';
+  var text = event.target.value.split('');
+  var acum = 0;
+  for (var i = 0; i < text.length; i++) {
+    if (text[i] === '\n') {
+      acum++;
+    }
+    if (acum) {
+      event.target.rows = acum + 2;
+    }
+  }
+  
+  /* Agrega una línea más para que no aparezca el scroll, cuando la cantidad de caracteres 
+  ingresados (sin dar un enter), supera al tamaño del textarea por defecto */
+
+  if ((event.target.value.trim().length / event.target.cols) < event.target.rows) {
+    event.target.rows = (event.target.value.trim().length / event.target.cols) + 2;
   }
 };
 
